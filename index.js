@@ -30,4 +30,4 @@ function chainGet(obj, path = []) {
 }
 
 
-export default chainGet;
+module.exports = chainGet;
