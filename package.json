@@ -1,10 +1,12 @@
 {
   "name": "chain-get",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel index.js --out-dir lib",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -18,13 +20,19 @@
   },
   "homepage": "https://github.com/huruji/chain-get#readme",
   "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "babel-plugin-no-debugging": "^1.3.1",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "standard-version": "^4.4.0"
   },
   "files": [
-    "index.js"
+    "lib/index.js"
   ]
 }
